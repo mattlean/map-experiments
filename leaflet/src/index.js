@@ -7,7 +7,7 @@ if (!rootEl) {
   throw new Error('HTML element with an ID of "root" was not found.');
 }
 
-const mapEl = document.createElement("map");
+const mapEl = document.createElement("div");
 mapEl.setAttribute("id", "map");
 rootEl.appendChild(mapEl);
 
