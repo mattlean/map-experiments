@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`helloWorld function renders "Hello World!" div element 1`] = `
-<div>
-  Hello World!
-</div>
-`;

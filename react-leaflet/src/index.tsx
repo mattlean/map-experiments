@@ -1,8 +1,7 @@
-import "leaflet/dist/leaflet.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import HelloWorld from "./HelloWorld";
+import ReactLeafletMap from "./ReactLeafletMap";
 import "./index.css";
 import "./leafletSetup";
 
@@ -15,6 +14,6 @@ if (!rootEl) {
 const root = createRoot(rootEl);
 root.render(
   <StrictMode>
-    <HelloWorld />
+    <ReactLeafletMap />
   </StrictMode>,
 );

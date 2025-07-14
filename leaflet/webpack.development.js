@@ -1,3 +1,4 @@
+const path = require("path");
 const {
   buildSourceMaps,
   ignoreWatch,
@@ -8,7 +9,7 @@ const {
 } = require("ljas-webpack");
 const { merge } = require("webpack-merge");
 
-const { PATH_BUILD_DEV, PATH_SRC } = require("./PATHS");
+const { PATH_BUILD_DEV, PATH_ROOT, PATH_SRC } = require("./PATHS");
 
 if (!process.env.PORT_WEBPACK_DEV_SERVER) {
   throw new Error("🔴 webpack-dev-server port was not set");
@@ -30,7 +31,12 @@ module.exports = merge([
 
   ignoreWatch(/node_modules/),
 
-  injectCss({ rule: { include: PATH_SRC } }),
+  injectCss({
+    rule: {
+      exclude: /node_modules(?!\/leaflet\/dist)/,
+      include: [PATH_SRC, path.resolve(PATH_ROOT, "node_modules/leaflet/dist")],
+    },
+  }),
 
   loadFonts({
     rule: {
