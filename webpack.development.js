@@ -1,3 +1,4 @@
+const path = require("path");
 const setupReactFastRefreshServerTs = require("ljas-webpack/setupReactFastRefreshServerTs");
 const {
   buildSourceMaps,
@@ -30,7 +31,12 @@ module.exports = merge([
 
   ignoreWatch(/node_modules/),
 
-  injectCss({ rule: { include: PATH_SRC } }),
+  injectCss({
+    rule: {
+      exclude: /node_modules(?!\/leaflet\/dist)/,
+      include: [PATH_SRC, path.resolve(PATH_ROOT, "node_modules/leaflet/dist")],
+    },
+  }),
 
   loadFonts({
     rule: {

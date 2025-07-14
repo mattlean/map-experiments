@@ -1,7 +1,10 @@
+import "leaflet/dist/leaflet.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import HelloWorld from "./HelloWorld";
+import "./index.css";
+import "./leafletSetup";
 
 const rootEl = document.getElementById("root");
 

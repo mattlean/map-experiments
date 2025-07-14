@@ -1,5 +1,6 @@
 const buildTransformedCss = require("ljas-webpack/buildTransformedCss");
 const compileReactTs = require("ljas-webpack/compileReactTs");
+const path = require("path");
 const { buildSourceMaps, loadFonts, loadImages } = require("ljas-webpack");
 const { merge } = require("webpack-merge");
 
@@ -32,7 +33,10 @@ module.exports = merge([
   },
 
   buildTransformedCss({
-    rule: { include: PATH_SRC },
+    rule: {
+      exclude: /node_modules(?!\/leaflet\/dist)/,
+      include: [PATH_SRC, path.resolve(PATH_ROOT, "node_modules/leaflet/dist")],
+    },
     miniCssExtractPlugin: { filename: "[name].[contenthash].css" },
   }),
 
