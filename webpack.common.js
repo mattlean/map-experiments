@@ -11,4 +11,16 @@ module.exports = merge([
   },
 
   buildHtml({ title: "map-experiments" }),
+
+  // Import .geojson files as JSON files
+  {
+    module: {
+      rules: [
+        {
+          test: /\.(json|geojson)$/,
+          type: "json",
+        },
+      ],
+    },
+  },
 ]);
