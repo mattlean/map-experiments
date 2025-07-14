@@ -10,7 +10,7 @@ module.exports = merge([
     output: { clean: true },
   },
 
-  buildHtml({ title: "map-experiments" }),
+  buildHtml({ title: "react-leaflet-playground" }),
 
   // Import .geojson files as JSON files
   {

@@ -1,10 +1,10 @@
 version: "3.8"
-name: map-experiments
+name: react-leaflet-playground
 services:
   app:
     build: .
-    image: map-experiments
-    container_name: map-experiments
+    image: react-leaflet-playground
+    container_name: react-leaflet-playground
     restart: always
     ports:
       - "${PORT_WEBPACK_DEV_SERVER}:${PORT_WEBPACK_DEV_SERVER}"
