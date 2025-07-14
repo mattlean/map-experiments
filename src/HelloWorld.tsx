@@ -3,10 +3,10 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 export default function HelloWorld() {
   return (
     <MapContainer
+      id="map"
       center={[51.505, -0.09]}
-      zoom={13}
+      zoom={17}
       scrollWheelZoom={false}
-      className="map-container"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
