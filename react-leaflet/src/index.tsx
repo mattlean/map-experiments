@@ -1,9 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import ReactLeafletMap from "./ReactLeafletMap";
+// import BasicMap from "./BasicMap";
+import LayersControlMap from "./LayersControlMap";
 import "./index.css";
-import "./leafletSetup";
+import "./setupLeaflet";
 
 const rootEl = document.getElementById("root");
 
@@ -14,6 +15,6 @@ if (!rootEl) {
 const root = createRoot(rootEl);
 root.render(
   <StrictMode>
-    <ReactLeafletMap />
+    <LayersControlMap />
   </StrictMode>,
 );

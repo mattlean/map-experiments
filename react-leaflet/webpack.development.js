@@ -74,6 +74,7 @@ module.exports = merge([
     },
     devServer: {
       historyApiFallback: true,
+      host: "0.0.0.0", // Allow webpack-dev-server to be accessed on LAN
       port: process.env.PORT_WEBPACK_DEV_SERVER,
       watchFiles: ["src/**/*.ejs"],
     },

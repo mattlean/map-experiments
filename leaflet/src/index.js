@@ -1,5 +1,6 @@
+import drawMap from "./drawMap";
 import "./index.css";
-import setupLeafletMap from "./leafletMap";
+import "./setupLeaflet";
 
 const rootEl = document.getElementById("root");
 
@@ -11,4 +12,4 @@ const mapEl = document.createElement("div");
 mapEl.setAttribute("id", "map");
 rootEl.appendChild(mapEl);
 
-setupLeafletMap();
+drawMap();

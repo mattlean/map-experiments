@@ -1,6 +1,6 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
-export default function ReactLeafletMap() {
+export default function BasicMap() {
   return (
     <MapContainer
       id="map"
