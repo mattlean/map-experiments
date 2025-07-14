@@ -1,11 +1,11 @@
 version: "3.8"
-name: ljas-react-browser-ts-e2e
+name: map-experiments-e2e
 services:
   app:
     build:
       dockerfile: e2e.Dockerfile
-    image: ljas-react-browser-ts-e2e
-    container_name: ljas-react-browser-ts-e2e
+    image: map-experiments-e2e
+    container_name: map-experiments-e2e
     restart: always
     ports:
       - "${PORT_WEBPACK_DEV_SERVER_E2E}:${PORT_WEBPACK_DEV_SERVER_E2E}"

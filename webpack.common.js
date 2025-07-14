@@ -10,5 +10,5 @@ module.exports = merge([
     output: { clean: true },
   },
 
-  buildHtml({ title: "ljas-react-browser-ts" }),
+  buildHtml({ title: "map-experiments" }),
 ]);

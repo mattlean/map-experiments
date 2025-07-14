@@ -3,8 +3,8 @@ import { expect, test } from "@playwright/test";
 
 import { loadApp } from "./util";
 
-test("has ljas-react-browser-ts title", async ({ page }) => {
+test("has map-experiments title", async ({ page }) => {
   await loadApp(page);
 
-  await expect(page).toHaveTitle(/ljas-react-browser-ts/i);
+  await expect(page).toHaveTitle(/map-experiments/i);
 });

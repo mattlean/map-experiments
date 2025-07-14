@@ -1,10 +1,10 @@
 version: "3.8"
-name: ljas-react-browser-ts
+name: map-experiments
 services:
   app:
     build: .
-    image: ljas-react-browser-ts
-    container_name: ljas-react-browser-ts
+    image: map-experiments
+    container_name: map-experiments
     restart: always
     ports:
       - "${PORT_WEBPACK_DEV_SERVER}:${PORT_WEBPACK_DEV_SERVER}"
